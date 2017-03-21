@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="UTF-8">
+	<script type="text/javascript" src="prototypes.js"></script>
+	<script type="text/javascript" src="new_digit.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+window.onload =function(){
+	document.getElementById("convert").addEventListener("click", convertIt);
+};
+
+function convertIt(){
+	var input = document.getElementById("input").value;
+	var output = convertToLetters(input);
+	document.getElementById("output").innerHTML = output;
+}
+
+</script>
+<input type="text" id="input" >
+<button id="convert">Click Me</button>
+<div id="output"></div>
+</body>
+</html>
