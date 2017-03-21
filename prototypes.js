@@ -34,6 +34,9 @@ Array.prototype.reverseAndJoin = function(){
  		if( i == 0){
 			list.push(value.stringifyValues());
  		}
+ 		else if(i == 1 && value == '0'){
+ 			list.push('');
+ 		}
  		else{
  			list.push(value.stringifyValues()+" "+ i.toString().stringifyPlace());
  		}
