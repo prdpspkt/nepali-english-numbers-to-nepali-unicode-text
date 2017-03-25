@@ -1,3 +1,4 @@
+
 String.prototype.lastThree = function(){
 	return this.substr(this.length - 3);
 };
@@ -42,4 +43,5 @@ Array.prototype.reverseAndJoin = function(){
  		}
  	});
     return list.reverse().join(" ");
-};
+}
+

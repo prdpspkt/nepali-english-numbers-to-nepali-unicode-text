@@ -15,12 +15,17 @@ window.onload =function(){
 function convertIt(){
 	var input = document.getElementById("input").value;
 	var output = convertToLetters(input);
+	var output2 = convertToNepaliDigit(input);
 	document.getElementById("output").innerHTML = output;
+	document.getElementById("output2").innerHTML = output2+"/"+commaInNepali(output2);
+
+
 }
 
 </script>
 <input type="text" id="input" >
 <button id="convert">Click Me</button>
 <div id="output"></div>
+<div id="output2"></div>
 </body>
 </html>
