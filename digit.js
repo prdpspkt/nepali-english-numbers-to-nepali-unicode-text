@@ -5,7 +5,7 @@ function convertToWords(number){
      if(length > 3){
 
         // get last three digits of given number 
-     	var lastThree = str.lastThree();
+     	var lastThree = str.lastThree(true);
 
         // remove last three digit and take remaining digits
      	var remStr = str.removeLastThree();
@@ -15,6 +15,7 @@ function convertToWords(number){
 
         // make a array 
      	var remStrips = lastThree.sliceToTwo().concat(remStr.sliceToTwo());
+        console.log(remStrips)
    
         //reverse the array and join
         nepaliStr = remStrips.reverseAndJoin();
@@ -101,7 +102,7 @@ function commafy(number){
      if(length > 3){
 
         // get last three digits of given number 
-        var lastThree = str.lastThree();
+        var lastThree = str.lastThree(false);
 
         // remove last three digit and take remaining digits
         var remStr = str.removeLastThree();
