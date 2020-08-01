@@ -1,6 +1,11 @@
 
-String.prototype.lastThree = function(){
+String.prototype.lastThree = function(parseint){
+	if(parseint){
+	return parseInt(this.substr(this.length - 3)).toString();
+}
+else{
 	return this.substr(this.length - 3);
+}
 };
 String.prototype.sliceToTwo = function(){
 	var sliced = [];
@@ -11,7 +16,7 @@ String.prototype.sliceToTwo = function(){
  		number = number.slice(0,-2);
  		numberLength = numberLength - 1;
  	}
-	return sliced
+	return sliced;
 }
 String.prototype.removeLastThree = function(){
 	return this.slice(0,-3);
