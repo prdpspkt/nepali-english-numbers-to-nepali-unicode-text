@@ -1,4 +1,4 @@
-function convertToLetters(number){
+function convertToWords(number){
      var str = number.toString();
      var length = str.length;
      var nepaliStr = [];
@@ -41,8 +41,60 @@ function convertToNepaliDigit(number){
     return sliced.reverse().join('').toString();
 }
 
+function convertToNepaliText(number){
+    var number = number.toString();
+    var number_before_decimal = number.split(".")[0]
+    var number_after_decimal = number.split(".")[1]
+    var text1 = convertToWords(number_before_decimal);
+    var text2 = "";
+    if(typeof number_after_decimal !== "undefined"){
+        text2 = convertToWords(number_after_decimal);
+        return text1 + " दशमलव " + text2;
+    }
+    else{
+        return text1;
+    }
 
-function commaInNepali(number){
+}
+
+function convertToNepaliNumber(number){
+    var number = number.toString();
+    var number_before_decimal = number.split(".")[0]
+    var number_after_decimal = number.split(".")[1]
+    var text1 = convertToNepaliDigit(number_before_decimal);
+    var text2 = "";
+    if(typeof number_after_decimal !== "undefined"){
+        text2 = convertToNepaliDigit(number_after_decimal);
+        return text1 + "." + text2;
+    }
+    else{
+        return text1;
+    }
+
+}
+
+
+function convertToCommaNumber(number){
+    var number = number.toString();
+    var number_before_decimal = number.split(".")[0]
+    var number_after_decimal = number.split(".")[1]
+    var text1 = commafy(number_before_decimal);
+    var text2 = "";
+    if(typeof number_after_decimal !== "undefined"){
+        text2 =  number_after_decimal;
+        return text1 + "." + text2;
+    }
+    else{
+        return text1;
+    }
+
+}
+
+
+
+
+
+function commafy(number){
 
  var str = number.toString();
      var length = str.length;
