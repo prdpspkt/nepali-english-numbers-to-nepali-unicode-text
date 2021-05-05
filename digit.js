@@ -5,25 +5,26 @@ function convertToWords(number){
      if(length > 3){
 
         // get last three digits of given number 
-     	var lastThree = str.lastThree(true);
+        var lastThree = str.lastThree();
 
         // remove last three digit and take remaining digits
-     	var remStr = str.removeLastThree();
+        var remStr = str.removeLastThree();
 
         // get length of remaining digits in number
-     	var remStrLength = remStr.length;
+        var remStrLength = remStr.length;
+
 
         // make a array 
-     	var remStrips = lastThree.sliceToTwo().concat(remStr.sliceToTwo());
+        var remStrips = lastThree.sliceToTwo().concat(remStr.sliceToTwo());
+        
         console.log(remStrips)
-   
         //reverse the array and join
         nepaliStr = remStrips.reverseAndJoin();
     }
     else{
 
       remStrips = str.sliceToTwo();
- 	  nepaliStr = remStrips.reverseAndJoin();
+      nepaliStr = remStrips.reverseAndJoin();
  }
 
 return nepaliStr;
@@ -102,14 +103,19 @@ function commafy(number){
      if(length > 3){
 
         // get last three digits of given number 
-        var lastThree = str.lastThree(false);
+        var lastThree = str.lastThree();
 
         // remove last three digit and take remaining digits
-        var remStr = str.removeLastThree();
-
+        var number = str.slice(0, -3);
+        var sliced = [];
+        var numberLength = number.length
+            for(i=0; i <= number.length; i++){
+              sliced.push(number.substr(number.length - 2));
+              number = number.slice(0,-2);
+            }
         
         // make a array 
-        var remStrips = remStr.sliceToTwo().reverse().join(",")+","+lastThree;
+        var remStrips = sliced.reverse().join(",")+","+lastThree;
         return remStrips;
     }
     else{

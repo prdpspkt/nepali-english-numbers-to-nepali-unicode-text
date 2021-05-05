@@ -1,21 +1,15 @@
 
-String.prototype.lastThree = function(parseint){
-	if(parseint){
-	return parseInt(this.substr(this.length - 3)).toString();
-}
-else{
+String.prototype.lastThree = function(){
 	return this.substr(this.length - 3);
-}
 };
 String.prototype.sliceToTwo = function(){
 	var sliced = [];
 	var number = this;
 	var numberLength = number.length
-		for(i=0; i< numberLength; i++){
- 		sliced.push(number.substr(number.length - 2));
- 		number = number.slice(0,-2);
- 		numberLength = numberLength - 1;
- 	}
+		for(i=0; i <= number.length; i++){
+          sliced.push(parseInt(number.substr(number.length - 2)).toString());
+          number = number.slice(0,-2);
+        }
 	return sliced;
 }
 String.prototype.removeLastThree = function(){
@@ -37,11 +31,10 @@ String.prototype.stringifyPlace = function(){
 Array.prototype.reverseAndJoin = function(){
 	 var list = [];
 	 this.forEach(function(value, i){
- 		if( i == 0){
+ 		if(parseInt(value) == 0){
+ 			list.push('');}
+ 		else if( i < 1){
 			list.push(value.stringifyValues());
- 		}
- 		else if(i == 1 && value == '0'){
- 			list.push('');
  		}
  		else{
  			list.push(value.stringifyValues()+" "+ i.toString().stringifyPlace());
