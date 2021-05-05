@@ -19,4 +19,14 @@ function convertIt(){
 <input type="text" id="input" >
 <button id="convert">Click Me</button>
 <div id="output"></div>
-<div id="output2"></div>```
+<div id="output2"></div> 
+```
+
+
+### Input and Output
+
+**Input:** 1200
+ ``` convertToNepaliText(1200) => एक हजार दुई सय
+     convertToNepaliNumber(1200) => १२००
+     convertToCommaNumber(1200) => १,२००
+ ```
