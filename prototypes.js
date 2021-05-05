@@ -6,7 +6,7 @@ String.prototype.sliceToTwo = function(){
 	var sliced = [];
 	var number = this;
 	var numberLength = number.length
-		for(i=0; i <= number.length; i++){
+		for(i=0; 1 <= number.length; i++){
           sliced.push(parseInt(number.substr(number.length - 2)).toString());
           number = number.slice(0,-2);
         }
