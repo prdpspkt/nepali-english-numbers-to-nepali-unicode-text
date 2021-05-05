@@ -109,7 +109,7 @@ function commafy(number){
         var number = str.slice(0, -3);
         var sliced = [];
         var numberLength = number.length
-            for(i=0; i <= number.length; i++){
+            for(i=0; 1 <= number.length; i++){
               sliced.push(number.substr(number.length - 2));
               number = number.slice(0,-2);
             }
