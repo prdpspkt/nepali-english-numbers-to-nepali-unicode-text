@@ -26,7 +26,8 @@ function convertIt(){
 ### Input and Output
 
 **Input:** 1200
- ``` convertToNepaliText(1200) => एक हजार दुई सय
-     convertToNepaliNumber(1200) => १२००
-     convertToCommaNumber(1200) => १,२००
+ ``` 
+ convertToNepaliText(1200) => एक हजार दुई सय
+ convertToNepaliNumber(1200) => १२००
+ convertToCommaNumber(1200) => १,२००
  ```
